@@ -6,6 +6,7 @@ import (
 	"tutorial/chapter2"
 	"tutorial/chapter3"
 	"tutorial/chapter4"
+	"tutorial/chapter6"
 )
 
 func main() {
@@ -22,6 +23,7 @@ func main() {
 	chapter2.Closure()
 	chapter2.Recursion()
 	chapter2.Defering()
+	chapter2.StackingDefers()
 
 	chapter3.Pointers()
 	chapter3.Structures()
@@ -34,4 +36,7 @@ func main() {
 	chapter4.Channels()
 	chapter4.Unbuffered()
 	chapter4.Synchronising()
+	chapter4.Directions()
+
+	chapter6.Selecting()
 }
