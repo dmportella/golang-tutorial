@@ -14,7 +14,7 @@ func Selecting() {
 
 	go func() {
 		time.Sleep(time.Second * 2)
-		c1 <- "two"
+		c2 <- "two"
 	}()
 
 	for i := 0; i < 2; i++ {
