@@ -10,7 +10,6 @@ import (
 )
 
 func main() {
-	chapter2.InLineFunctions()
 	
 }
 
@@ -51,4 +50,5 @@ func main2() {
 	chapter6.Selecting()
 	chapter6.Timeouts()
 	chapter6.Ranging()
+	chapter6.NonBlocking()
 }
