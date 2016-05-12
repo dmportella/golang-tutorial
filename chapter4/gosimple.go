@@ -10,6 +10,7 @@ func counting(name string) {
 	}
 }
 
+// Simple example of go routines at work
 func GoSimple() {
 	counting("directly")
 

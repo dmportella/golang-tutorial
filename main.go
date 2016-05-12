@@ -10,6 +10,11 @@ import (
 )
 
 func main() {
+	chapter2.InLineFunctions()
+	
+}
+
+func main2() {
 	chapter0.Printing()
 	chapter0.Variables()
 	chapter0.ControlFlow()
@@ -22,6 +27,7 @@ func main() {
 	chapter1.Range()
 
 	chapter2.Functions()
+	chapter2.InLineFunctions()
 	chapter2.MultiReturn()
 	chapter2.Variadric()
 	chapter2.Closure()
@@ -44,4 +50,5 @@ func main() {
 
 	chapter6.Selecting()
 	chapter6.Timeouts()
+	chapter6.Ranging()
 }

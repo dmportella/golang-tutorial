@@ -12,6 +12,7 @@ func sum(nums ...int){
 	fmt.Println(total)
 }
 
+// Simple use of '...'  variadric parameters.
 func Variadric() {
 	sum(1, 2, 3, 4, 5)
 

@@ -10,6 +10,7 @@ func counter() func() int {
 	}
 }
 
+// Demonstrating clouses at work.
 func Closure() {
 	myCounter := counter()
 

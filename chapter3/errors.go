@@ -10,6 +10,7 @@ func divide(a complex128, b complex128) (complex128, error) {
 	return a / b, nil
 }
 
+// Demonstrating the Error partner in golang.
 func Errors() {
 	var a, b complex128
 	a, b = 100i, 3i

@@ -2,6 +2,7 @@ package chapter2
 
 import "fmt"
 
+// Advance use of defer, stacking.
 func StackingDefers() {
 	fmt.Println("counting")
 

@@ -9,6 +9,7 @@ func factorial(n int) int {
 	return n * factorial(n - 1)
 }
 
+// Simple example of recursion.
 func Recursion() {
 	fmt.Println(factorial(7))
 }

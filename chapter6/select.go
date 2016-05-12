@@ -3,6 +3,7 @@ package chapter6
 import "fmt"
 import "time"
 
+// Using a select statement to receive messages from go routines using channels
 func Selecting() {
 	c1 := make(chan string)
 	c2 := make(chan string)

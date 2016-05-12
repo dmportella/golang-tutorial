@@ -2,6 +2,7 @@ package chapter0
 
 import "fmt"
 
+// Examples of using fmt print methods
 func Printing() {
 	fmt.Print("Hellow world")
 
