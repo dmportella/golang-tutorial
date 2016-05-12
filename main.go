@@ -43,4 +43,5 @@ func main() {
 	chapter4.Directions()
 
 	chapter6.Selecting()
+	chapter6.Timeouts()
 }
