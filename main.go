@@ -10,10 +10,6 @@ import (
 )
 
 func main() {
-	
-}
-
-func main2() {
 	chapter0.Printing()
 	chapter0.Variables()
 	chapter0.ControlFlow()

@@ -1,7 +1,6 @@
 package chapter6
 
 import "fmt"
-import "time"
 
 // Demonstrating how to fire a go routing with out block the main thread
 // by using the select statement with a default case. The channel will not signal

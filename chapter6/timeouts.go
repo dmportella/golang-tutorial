@@ -9,7 +9,8 @@ func red(text string) string {
 
 // Making use of time.After to timeout go routines this example
 // also demonstrate the use of cancelling a go routine that is waiting 
-// on a another go routine.
+// on a another go routine. This example also demonstrate non-blocking
+// time outs.
 func Timeouts() {
 	c1 := make(chan string, 1)
 	c2 := make(chan string, 1)
@@ -40,7 +41,7 @@ func Timeouts() {
     case responce := <-c1:
         fmt.Println(responce)
     case responce := <-c2:
-    	// once we recieve this we will tell the other go routine to stop by signaling the fin channel with a close
+    	// once we receive this we will tell the other go routine to stop by signaling the fin channel with a close
         fmt.Println(responce)
         close(fin)
     case <-time.After(time.Second * 2):
