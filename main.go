@@ -1,12 +1,12 @@
 package main;
 
 import (
-	"tutorial/chapter0"
-	"tutorial/chapter1"
-	"tutorial/chapter2"
-	"tutorial/chapter3"
-	"tutorial/chapter4"
-	"tutorial/chapter6"
+	"github.com/dmportella/golang-tutorial/chapter0"
+	"github.com/dmportella/golang-tutorial/chapter1"
+	"github.com/dmportella/golang-tutorial/chapter2"
+	"github.com/dmportella/golang-tutorial/chapter3"
+	"github.com/dmportella/golang-tutorial/chapter4"
+	"github.com/dmportella/golang-tutorial/chapter6"
 )
 
 func main() {
