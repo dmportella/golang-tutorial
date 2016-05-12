@@ -7,6 +7,7 @@ import (
 	"github.com/dmportella/golang-tutorial/chapter3"
 	"github.com/dmportella/golang-tutorial/chapter4"
 	"github.com/dmportella/golang-tutorial/chapter6"
+	"github.com/dmportella/golang-tutorial/chapter9"
 )
 
 func main() {
@@ -47,4 +48,6 @@ func main() {
 	chapter6.Timeouts()
 	chapter6.Ranging()
 	chapter6.NonBlocking()
+
+	chapter9.Sockets()
 }
