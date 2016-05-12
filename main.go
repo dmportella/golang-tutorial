@@ -11,6 +11,10 @@ import (
 
 func main() {
 	chapter0.Printing()
+	chapter0.Variables()
+	chapter0.ControlFlow()
+	chapter0.IfElse()
+	chapter0.Switches()
 
 	chapter1.Arrays()
 	chapter1.Slices()
