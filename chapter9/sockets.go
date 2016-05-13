@@ -7,9 +7,13 @@ import (
 	"time"
 )
 
+// Simple closure that creates a listening port (opening it) and 
+// returning a anonymous function with the go routine loop for 
+// accepting client connections. This server can be closed with
+// the stop channel.
 func createServer() func (stop chan struct{}) {
 	fmt.Println("Starting server")
-	ln, err := net.Listen("tcp", ":8080")
+	ln, err := net.Listen("tcp", ":44646")
 
 	if err != nil {
 		panic(err)
@@ -48,9 +52,13 @@ func createServer() func (stop chan struct{}) {
 	}
 }
 
+// Simple client closure that dial to the server and returns a anonymous
+// function that handles the messaging with the server, sending 10 hellos
+// and receiving the acknowlegements from the server. At the signaling
+// for the closure of the client and server.
 func createClient() func (stop chan struct{}) {
 	fmt.Println("Connecting to server")
-	conn, err := net.Dial("tcp", "127.0.0.1:8080")
+	conn, err := net.Dial("tcp", "127.0.0.1:44646")
 
 	if err != nil {
 		panic(err)
