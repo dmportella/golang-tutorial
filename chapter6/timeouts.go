@@ -7,6 +7,10 @@ func red(text string) string {
 	return fmt.Sprintf("\x1b[41m\x1b[93m%s\x1b[0m", text)
 }
 
+func green(text string) string {
+	return fmt.Sprintf("\x1b[42m%s\x1b[0m", text)
+}
+
 // Making use of time.After to timeout go routines this example
 // also demonstrate the use of cancelling a go routine that is waiting 
 // on a another go routine. This example also demonstrate non-blocking
@@ -22,10 +26,10 @@ func Timeouts() {
 	go func(msg chan<- string, finish chan struct{}) {
 		select {
 		case <- finish:
-			fmt.Println("Channel 1 Closed!!!")
+			fmt.Println(red("Channel 1 Closed!!!"))
 			return
 		case <- time.After(time.Second * 1):
-			fmt.Println("DONE STUFF")
+			fmt.Println(green("DONE STUFF"))
 			c1 <- "ping"
 		}
 		
@@ -33,7 +37,7 @@ func Timeouts() {
 
 	go func() {
 		time.Sleep(time.Millisecond * 800)
-		fmt.Println("channel 2 go routine")
+		fmt.Println(green("channel 2 go routine"))
 		c2 <- "pong"
 	}()
 
@@ -45,7 +49,7 @@ func Timeouts() {
         fmt.Println(responce)
         close(fin)
     case <-time.After(time.Second * 2):
-        fmt.Println("timeout")
+        fmt.Println(red("timeout"))
     }
 
     time.Sleep(time.Second * 2)
