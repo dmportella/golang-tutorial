@@ -16,18 +16,20 @@ var Build string
 var Revision string
 
 func main() {
-	fmt.Printf("Golang tutorial version %s at revision %s.\n\r", Build, Revision)
+	fmt.Printf("Golang tutorial version %s at revision %s.\n\rDaniel Portella (c) 2016\n\r", Build, Revision)
 
 	chapter0.Printing()
 	chapter0.Variables()
 	chapter0.ForLoop()
 	chapter0.IfElse()
 	chapter0.Switches()
+	chapter0.Constants()
 
 	chapter1.Arrays()
 	chapter1.Slices()
 	chapter1.Maps()
 	chapter1.Range()
+	chapter1.VariableRedux()
 
 	chapter2.Functions()
 	chapter2.InLineFunctions()

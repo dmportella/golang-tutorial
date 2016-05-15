@@ -4,6 +4,7 @@ import "fmt"
 
 func ForLoop() {
 	// you can instanciate variables outside of the for loop and only eval the expression in it.
+	// this is also known as a while loop
 	i:= 0
 	for i < 3 {
 		fmt.Print(i)
