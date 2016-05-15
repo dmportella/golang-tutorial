@@ -8,8 +8,10 @@ As I find more I will be adding it to here.
 
 ```
 .
+├── build.sh
 ├── chapter0
-│   ├── control-flow.go
+│   ├── constants.go
+│   ├── for-loop.go
 │   ├── if-else.go
 │   ├── print.go
 │   ├── switches.go
@@ -18,7 +20,8 @@ As I find more I will be adding it to here.
 │   ├── arrays.go
 │   ├── maps.go
 │   ├── ranges.go
-│   └── slices.go
+│   ├── slices.go
+│   └── variables-redux.go
 ├── chapter2
 │   ├── closures.go
 │   ├── defering.go
@@ -51,9 +54,9 @@ As I find more I will be adding it to here.
 │   └── timeouts.go
 ├── chapter9
 │   └── sockets.go
-├── golang-tutorial
 ├── LICENSE
 ├── main.go
-└── README.md
+├── README.md
+└── tutorial
 
 ```
