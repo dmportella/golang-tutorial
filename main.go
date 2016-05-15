@@ -8,9 +8,16 @@ import (
 	"github.com/dmportella/golang-tutorial/chapter4"
 	"github.com/dmportella/golang-tutorial/chapter6"
 	"github.com/dmportella/golang-tutorial/chapter9"
+
+	"fmt"
 )
 
+var Build string
+var Revision string
+
 func main() {
+	fmt.Printf("Golang tutorial version %s at revision %s.\n\r", Build, Revision)
+
 	chapter0.Printing()
 	chapter0.Variables()
 	chapter0.ForLoop()
