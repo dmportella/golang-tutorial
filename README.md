@@ -6,6 +6,8 @@ As I find more I will be adding it to here.
 
 @dmportella
 
+[![Build Status](https://travis-ci.org/dmportella/golang-tutorial.svg?branch=master)](https://travis-ci.org/dmportella/golang-tutorial)
+
 ```
 .
 ├── build.sh
