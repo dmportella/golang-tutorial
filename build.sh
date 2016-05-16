@@ -17,7 +17,7 @@ go test ./chapter5 -bench=.
 
 echo "golang build"
 
-go build -ldflags "-X main.Build=${VERSION} -X main.Revision=${REV}" -o tutorial .
+go build -ldflags "-X main.Build=${VERSION} -X main.Revision=${REV}" -v -o tutorial .
 
 echo "DONE"
 

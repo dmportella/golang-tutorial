@@ -6,6 +6,7 @@ func meaningOfLife() int {
 	return 42
 }
 
+// Examples of If Else statements
 func IfElse() {
 	// normal if statement
 	if 4 % 2 == 0 {
@@ -25,6 +26,8 @@ func IfElse() {
 	}
 
 	// this also works with method calls
+	// this is commonly used when i method with a multi return format returns a error
+	// which you can use to evaluate if the method call was successful.
 	if answer := meaningOfLife(); answer == 42 {
 		fmt.Println("we found it!")
 	}

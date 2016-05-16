@@ -12,8 +12,6 @@ func VariableRedux() {
 		complex complex128 = 2+3i
 	)
 	
-	// standard format would use %T(%v) however that would require us to pass the variables twice to print correctly
-	// instead we use the format index, %[1]T(%[1]v) which tells the formatter to use the first variable we pass in.
 	const f = "%[1]T(%[1]v)\n"
 
 	fmt.Printf(f, isBoolean)
