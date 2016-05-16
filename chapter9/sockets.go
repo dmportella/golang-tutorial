@@ -93,6 +93,6 @@ func Sockets() {
 
 	go client(stop)
 
-	// stopping server and all go routines
+	// When the client closes the stop channel the maint thread will get the signal and continue to execute.
 	<-stop
 }

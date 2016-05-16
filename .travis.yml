@@ -1,0 +1,11 @@
+sudo: required
+
+language: go
+
+services:
+  - docker
+
+go:
+  - tip
+    
+script: bash build.sh
