@@ -13,7 +13,7 @@ echo "revision: " $REV "version: " ${VERSION}
 
 echo "testing project - chapter5"
 
-go test ./chapter5
+go test ./chapter5 -bench=.
 
 echo "golang build"
 
