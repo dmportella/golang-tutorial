@@ -9,7 +9,7 @@ func TestFibonacci(t *testing.T) {
 	actual := Fibonacci(input)
 
 	if actual != expected {
-	    t.Errorf("Fibonacci(%d): expected %d, actual %d", input, expected, actual)
+		t.Errorf("Fibonacci(%d): expected %d, actual %d", input, expected, actual)
 	}
 }
 

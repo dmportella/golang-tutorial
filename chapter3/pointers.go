@@ -11,7 +11,7 @@ func resetPointer(value *int) {
 }
 
 func Pointers() {
-	value:= 100
+	value := 100
 
 	fmt.Print("initial:", value)
 

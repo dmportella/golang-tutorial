@@ -4,7 +4,7 @@ import "fmt"
 
 type person struct {
 	name string
-	age int
+	age  int
 }
 
 func Structures() {

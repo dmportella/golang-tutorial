@@ -17,7 +17,7 @@ func Maps() {
 	// you can use the builtin len function to get the length of a map
 	fmt.Println(m, len(m))
 
-	// use the builtin delete function to delete an entry on a map 
+	// use the builtin delete function to delete an entry on a map
 	delete(m, "b")
 
 	fmt.Println(m)
@@ -35,5 +35,5 @@ func Maps() {
 
 	nothing, test := m["hello"]
 
-	fmt.Println(nothing, "and", test)	
+	fmt.Println(nothing, "and", test)
 }

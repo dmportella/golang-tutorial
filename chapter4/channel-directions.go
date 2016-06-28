@@ -16,7 +16,7 @@ func Directions() {
 	pongs := make(chan string, 1)
 
 	ping(pings, "ping pongs message")
-	
+
 	pong(pings, pongs)
 
 	fmt.Println(<-pongs)

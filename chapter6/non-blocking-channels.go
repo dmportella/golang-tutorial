@@ -9,7 +9,7 @@ func NonBlocking() {
 	channel := make(chan string)
 
 	select {
-	case message := <- channel:
+	case message := <-channel:
 		fmt.Println("message received", message)
 	default:
 		fmt.Println("main thread can continue")
@@ -17,9 +17,9 @@ func NonBlocking() {
 
 	message := "hello world"
 	select {
-		case channel <- message:
-			fmt.Println("message sent", message)
-		default:
-			fmt.Println("main thread can continue")
+	case channel <- message:
+		fmt.Println("message sent", message)
+	default:
+		fmt.Println("main thread can continue")
 	}
 }

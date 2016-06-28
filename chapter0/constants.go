@@ -21,7 +21,7 @@ const (
 // iota counter are unique per constant group
 const (
 	reseted = iota
-	name = "hello"
+	name    = "hello"
 )
 
 func Constants() {

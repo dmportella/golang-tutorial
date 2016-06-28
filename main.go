@@ -1,4 +1,4 @@
-package main;
+package main
 
 import (
 	"github.com/dmportella/golang-tutorial/chapter0"
@@ -12,7 +12,10 @@ import (
 	"fmt"
 )
 
+// Build version of the binary
 var Build string
+
+// Revision number of the binary
 var Revision string
 
 func main() {

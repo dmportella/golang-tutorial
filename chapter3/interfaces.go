@@ -12,7 +12,7 @@ type geometry interface {
 	perim() float64
 }
 
-// The representation of a rectangle 
+// The representation of a rectangle
 type rect struct {
 	width, height float64
 }
@@ -22,10 +22,10 @@ func (r rect) area() float64 {
 }
 
 func (r rect) perim() float64 {
-	return 2 * r.width + 2 * r.height
+	return 2*r.width + 2*r.height
 }
 
-// The representation of a circle 
+// The representation of a circle
 type circle struct {
 	radius float64
 }
@@ -40,8 +40,8 @@ func (c circle) perim() float64 {
 
 // method using a interface
 func measure(g geometry) {
-	s:= reflect.TypeOf(g)
-	
+	s := reflect.TypeOf(g)
+
 	fmt.Println(s, g)
 	fmt.Println(g.area())
 	fmt.Println(g.perim())

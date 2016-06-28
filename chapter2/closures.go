@@ -3,7 +3,7 @@ package chapter2
 import "fmt"
 
 func counter() func() int {
-	count:=0
+	count := 0
 	return func() int {
 		count++
 		return count

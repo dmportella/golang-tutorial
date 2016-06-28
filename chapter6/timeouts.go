@@ -12,7 +12,7 @@ func green(text string) string {
 }
 
 // Making use of time.After to timeout go routines this example
-// also demonstrate the use of cancelling a go routine that is waiting 
+// also demonstrate the use of cancelling a go routine that is waiting
 // on a another go routine. This example also demonstrate non-blocking
 // time outs.
 func Timeouts() {
@@ -25,14 +25,14 @@ func Timeouts() {
 	// cancellable go routine
 	go func(msg chan<- string, finish chan struct{}) {
 		select {
-		case <- finish:
+		case <-finish:
 			fmt.Println(red("Channel 1 Closed!!!"))
 			return
-		case <- time.After(time.Second * 1):
+		case <-time.After(time.Second * 1):
 			fmt.Println(green("DONE STUFF"))
 			c1 <- "ping"
 		}
-		
+
 	}(c1, fin)
 
 	go func() {
@@ -42,15 +42,15 @@ func Timeouts() {
 	}()
 
 	select {
-    case responce := <-c1:
-        fmt.Println(responce)
-    case responce := <-c2:
-    	// once we receive this we will tell the other go routine to stop by signaling the fin channel with a close
-        fmt.Println(responce)
-        close(fin)
-    case <-time.After(time.Second * 2):
-        fmt.Println(red("timeout"))
-    }
+	case responce := <-c1:
+		fmt.Println(responce)
+	case responce := <-c2:
+		// once we receive this we will tell the other go routine to stop by signaling the fin channel with a close
+		fmt.Println(responce)
+		close(fin)
+	case <-time.After(time.Second * 2):
+		fmt.Println(red("timeout"))
+	}
 
-    time.Sleep(time.Second * 2)
+	time.Sleep(time.Second * 2)
 }

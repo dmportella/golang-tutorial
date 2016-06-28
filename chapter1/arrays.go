@@ -20,13 +20,12 @@ func Arrays() {
 	fmt.Println(a)
 
 	// you can declare and instanciate an array inline.
-	b:= [5]int{1,2,3,4,5}
+	b := [5]int{1, 2, 3, 4, 5}
 
 	fmt.Println(b)
 
-
 	// simple loop adding all the values of the array
-	sum:= 0
+	sum := 0
 	for i := 0; i < len(a); i++ {
 		sum += a[i]
 	}

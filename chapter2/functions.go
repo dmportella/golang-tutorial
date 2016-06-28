@@ -8,7 +8,7 @@ func addition(a int, b int) int {
 
 // Simple functions at work.
 func Functions() {
-	result:= addition(10, 10)
+	result := addition(10, 10)
 
 	fmt.Println("10 + 10 =", result)
 }

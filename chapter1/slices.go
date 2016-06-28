@@ -23,7 +23,6 @@ func Slices() {
 	slice[1] = "b"
 	slice[2] = "c"
 
-
 	fmt.Println(slice, inline)
 
 	// slices can be appended too by use of the append builtin function
@@ -32,7 +31,7 @@ func Slices() {
 
 	fmt.Println(slice)
 
-	cpy:= make([]string, len(slice))
+	cpy := make([]string, len(slice))
 
 	// copy is another builtin function that can be used to copy the contents from one slice into another
 	copy(cpy, slice)
@@ -40,7 +39,7 @@ func Slices() {
 	fmt.Println(cpy)
 
 	// slices can be created from arrays
-	array := []int{1,2,3}
+	array := []int{1, 2, 3}
 
 	// using the indexing to create a slice over the array.
 	// [start:end] notation instructs the runtime to copy the array from start index to the end index.

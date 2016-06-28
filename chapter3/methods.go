@@ -11,11 +11,11 @@ func (r *rectangle) area() int {
 }
 
 func (r *rectangle) perim() int {
-	return 2 * r.width + 2 * r.height
+	return 2*r.width + 2*r.height
 }
 
 func Methods() {
-	rect:= rectangle{width:10, height:5}
+	rect := rectangle{width: 10, height: 5}
 
 	fmt.Println(rect)
 

@@ -9,12 +9,12 @@ func meaningOfLife() int {
 // Examples of If Else statements
 func IfElse() {
 	// normal if statement
-	if 4 % 2 == 0 {
+	if 4%2 == 0 {
 		fmt.Println("4 is divisibly by 2")
 	}
 
 	// an if statement with a else clause
-	if 4 % 2 == 0 {
+	if 4%2 == 0 {
 		fmt.Println("even")
 	} else {
 		fmt.Println("odd")

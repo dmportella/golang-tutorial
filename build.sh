@@ -13,7 +13,17 @@ echo "revision: " $REV "version: " ${VERSION}
 
 echo "testing project - chapter5"
 
-go test ./chapter5 -bench=. -benchmem
+golint
+
+go fmt $(go list ./...)
+
+go generate $(go list ./... | grep -v /vendor/)
+
+go test $(go list ./... | grep -v '/vendor/' | grep -v '/builtin/bins/')  -timeout=30s -parallel=4 -bench=. -benchmem -cover
+
+#go test ./chapter5 -bench=. -benchmem
+
+go tool vet -all .
 
 echo "golang build"
 

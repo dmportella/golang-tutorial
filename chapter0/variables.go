@@ -5,13 +5,13 @@ import "fmt"
 func Variables() {
 
 	// go has numerous ways of instanciating variables.
-    var a string = "initial" // full hand
-    var b, c int = 1, 2 // multi init
-    var d = true // type inference
-    var e int // init zero valued
-    f := "short" // short hand (mostly used)
+	var a string = "initial" // full hand
+	var b, c int = 1, 2      // multi init
+	var d = true             // type inference
+	var e int                // init zero valued
+	f := "short"             // short hand (mostly used)
 
-    fmt.Println(a, b, c, d, e, f, "lets avoid compiler errors")
+	fmt.Println(a, b, c, d, e, f, "lets avoid compiler errors")
 }
 
 // List of types and their min and max values.

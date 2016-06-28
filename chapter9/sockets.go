@@ -1,17 +1,17 @@
 package chapter9
 
 import (
-	"net"
-	"fmt"
 	"bufio"
+	"fmt"
+	"net"
 	"time"
 )
 
-// Simple closure that creates a listening port (opening it) and 
-// returning a anonymous function with the go routine loop for 
+// Simple closure that creates a listening port (opening it) and
+// returning a anonymous function with the go routine loop for
 // accepting client connections. This server can be closed with
 // the stop channel.
-func createServer() func (stop chan struct{}) {
+func createServer() func(stop chan struct{}) {
 	fmt.Println("Starting server")
 	ln, err := net.Listen("tcp", ":44646")
 
@@ -22,7 +22,7 @@ func createServer() func (stop chan struct{}) {
 	handleConnection := func(conn net.Conn, stopping chan struct{}) {
 		for {
 			select {
-			case <- stopping:
+			case <-stopping:
 				defer conn.Close()
 				break
 			default:
@@ -33,7 +33,7 @@ func createServer() func (stop chan struct{}) {
 		}
 	}
 
-	return func (stop chan struct{}) {
+	return func(stop chan struct{}) {
 		for {
 			conn, err := ln.Accept()
 
@@ -42,7 +42,7 @@ func createServer() func (stop chan struct{}) {
 			}
 
 			select {
-			case <- stop:
+			case <-stop:
 				defer ln.Close()
 				break
 			default:
@@ -56,7 +56,7 @@ func createServer() func (stop chan struct{}) {
 // function that handles the messaging with the server, sending 10 hellos
 // and receiving the acknowlegements from the server. At the signaling
 // for the closure of the client and server.
-func createClient() func (stop chan struct{}) {
+func createClient() func(stop chan struct{}) {
 	fmt.Println("Connecting to server")
 	conn, err := net.Dial("tcp", "127.0.0.1:44646")
 
@@ -64,7 +64,7 @@ func createClient() func (stop chan struct{}) {
 		panic(err)
 	}
 
-	return func (stop chan struct{}) {
+	return func(stop chan struct{}) {
 		for i := 0; i < 10; i++ {
 			fmt.Fprintf(conn, "hello\n")
 
