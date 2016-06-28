@@ -48,6 +48,7 @@ func main() {
 	chapter3.Methods()
 	chapter3.Interfaces()
 	chapter3.Errors()
+	chapter3.Embedding()
 
 	chapter4.GoSimple()
 	chapter4.Waiting()
