@@ -17,6 +17,8 @@ func Printing() {
 
 	fmt.Println(".6")
 
+	fmt.Printf("%v\n\r", true)
+
 	// simple example of using excape sequences to draw text in colour
 	// check this site for more information about ascii excape sequences
 	// http://misc.flogisoft.com/bash/tip_colors_and_formatting
@@ -39,4 +41,12 @@ func Printing() {
 	fmt.Sscanf(" 12 34 567 ", "%5s%d", &s, &i)
 
 	fmt.Println(s, i)
+
+	// printing the value of pointers
+
+	originalName := "daniel"
+
+	namePointer := &originalName
+
+	fmt.Printf("hello %v", *namePointer)
 }
