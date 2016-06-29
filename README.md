@@ -6,11 +6,10 @@ As I find more I will be adding it to here.
 
 @dmportella
 
-[![Build Status](https://travis-ci.org/dmportella/golang-tutorial.svg?branch=master)](https://travis-ci.org/dmportella/golang-tutorial)
+[![Build Status](https://travis-ci.org/dmportella/golang-tutorial.svg?branch=master)](https://travis-ci.org/dmportella/golang-tutorial)[![GoDoc](https://godoc.org/github.com/dmportella/golang-tutorial?status.svg)](https://godoc.org/github.com/dmportella/golang-tutorial)
 
 ```
 .
-├── build.sh
 ├── chapter0
 │   ├── constants.go
 │   ├── for-loop.go
@@ -34,6 +33,7 @@ As I find more I will be adding it to here.
 │   ├── stacking-defers.go
 │   └── variadric.go
 ├── chapter3
+│   ├── embedding.go
 │   ├── errors.go
 │   ├── interfaces.go
 │   ├── methods.go
@@ -56,9 +56,13 @@ As I find more I will be adding it to here.
 │   └── timeouts.go
 ├── chapter9
 │   └── sockets.go
-├── golang-tutorial
 ├── LICENSE
 ├── main.go
+├── makefile
 ├── README.md
-└── tutorial
+└── vendor
+    └── vendor.json
+
+9 directories, 43 files
+
 ```
