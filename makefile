@@ -23,7 +23,7 @@ tools:
 
 build: version test
 	@echo "building..."
-	@go build -ldflags "-X main.Build=${VERSION} -X main.Revision=${REV}" -v -o golang-tutorial .
+	@go build -ldflags "-X main.Build=${VERSION} -X main.Revision=${REV} -X main.Branch=${BRANCH}" -v -o golang-tutorial .
 
 lint:
 	@echo "lint..."
