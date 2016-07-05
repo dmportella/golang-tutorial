@@ -7,34 +7,38 @@ VERSION?="0.0.0"
 
 default: version fmt lint vet test
 
+commit:
+	@git add . && git commit && git push origin master
+
 version:
-	@echo "branch: " ${BRANCH}
-	@echo "revision: " ${REV}
-	@echo "version: " ${VERSION}
+	@echo "SOFTWARE VERSION"
+	@echo "\tbranch:\t\t" ${BRANCH}
+	@echo "\trevision:\t" ${REV}
+	@echo "\tversion:\t" ${VERSION}
 
 ci: tools build
-	@echo "travis building..."
+	@echo "CI BUILD..."
 
 tools:
-	@echo "installing tools..."
+	@echo "GO TOOLS installation..."
 	@go get -u github.com/kardianos/govendor
 	@go get -u golang.org/x/tools/cmd/cover
 	@go get -u github.com/golang/lint/golint
 
 build: version test
-	@echo "building..."
+	@echo "GO BUILD..."
 	@go build -ldflags "-X main.Build=${VERSION} -X main.Revision=${REV} -X main.Branch=${BRANCH}" -v -o golang-tutorial .
 
 lint:
-	@echo "lint..."
+	@echo "GO LINT..."
 	@golint
 
 test: fmt generate lint vet
-	@echo "testing..."
+	@echo "GO TEST..."
 	@go test $(TEST) $(TESTARGS) -timeout=30s -parallel=4 -bench=. -benchmem -cover
 
 cover:
-	@echo "cover report..."
+	@echo "GO TOOL COVER..."
 	@go tool cover 2>/dev/null; if [ $$? -eq 3 ]; then \
 		go get -u golang.org/x/tools/cmd/cover; \
 	fi
@@ -43,14 +47,13 @@ cover:
 	@rm coverage.out
 
 generate:
-	@echo "generating..."
+	@echo "GO GENERATE..."
 	@go generate $(go list ./... | grep -v /vendor/)
 
 # vet runs the Go source code static analysis tool `vet` to find
 # any common errors.
 vet:
-	@echo "go vet..."
-	@echo "go tool vet $(VETARGS) ."
+	@echo "GO VET..."
 	@go tool vet $(VETARGS) $$(ls -d */ | grep -v vendor) ; if [ $$? -eq 1 ]; then \
 		echo ""; \
 		echo "Vet found suspicious constructs. Please check the reported constructs"; \
@@ -59,7 +62,7 @@ vet:
 	fi
 
 fmt:
-	@echo "gotfmt..."
+	@echo "GO FMT..."
 	@gofmt -w $(GOFMT_FILES)
 
 .PHONY: tools default
