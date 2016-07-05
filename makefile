@@ -7,8 +7,13 @@ VERSION?="0.0.0"
 
 default: version fmt lint vet test
 
+# Git commands
 commit:
-	@git add . && git commit && git push origin master
+	@git add . 
+	-@git rm $(git ls-files --others --deleted --exclude-standard)
+	@git commit 
+push:
+	@git push origin ${BRANCH}
 
 version:
 	@echo "SOFTWARE VERSION"
