@@ -24,6 +24,8 @@ const (
 	name    = "hello"
 )
 
+// Examples of using constants
+// Show how each setup works and ues of iota
 func Constants() {
 	const f = "%[1]T(%[1]v)\n\r"
 

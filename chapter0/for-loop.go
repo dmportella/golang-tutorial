@@ -2,6 +2,9 @@ package chapter0
 
 import "fmt"
 
+
+// Simple uses of for loops.
+// Standards uses and infinite loops.
 func ForLoop() {
 	// you can instanciate variables outside of the for loop and only eval the expression in it.
 	// this is also known as a while loop
