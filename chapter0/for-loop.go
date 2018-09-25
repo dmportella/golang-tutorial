@@ -2,7 +2,6 @@ package chapter0
 
 import "fmt"
 
-
 // Simple uses of for loops.
 // Standards uses and infinite loops.
 func ForLoop() {
